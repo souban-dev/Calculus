@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculus</title>
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <div class="stack-container">
+ <!-- /* =========================================
+              Welcome text
+   ========================================= */ -->
+             <div class="welcome-text" id="heroScreen">
+              <h1 class="title">Calculus</h1>
+              <p class="subtitle">The mathematics of infinitesimals</p>
+        </div>
+  <!-- /* =========================================
+   Calculus flashcards
+   ========================================= */ -->
+<div class="card card-1"><h2>Set</h2>
+        <p>Set is a collection of well defined objects(or entities).</p>
+        <h4>Subset:</h4>
+        <p>A subset is a collection of elements where every single element is also contained within a larger, parent set. If set B is a subset of set A, it is denoted as B ⊆ A.</p>
+        <img src="Images/Euler_diagram_-_B_is_subset_of_A.png" alt="Subset" style="float: right;" height="150" width="150">
+        <h4>Cartesian Product:</h4>
+        <p>The Cartesian product of two sets,say A and B (denoted A × B), is the set of all possible ordered pairs where the first element is from A and the second is from B. It essentially pairs every member of the first set with every member of the second set.</p></div>
+
+<div class="card card-2">
+  <h2>Relation</h2>
+  <p>A relation <em>R</em> from set A to set B is formally defined as any subset of the Cartesian product A × B (denoted as <strong>R ⊆ A × B</strong>). It establishes a relationship between elements of two sets based on a specific rule or condition.</p>
+  
+  <h4>Domain and Range:</h4>
+  <p>The <strong>domain</strong> of a relation is the set of all first elements from the ordered pairs in R (elements from set A that actually map to something). The <strong>range</strong> is the set of all second elements that are actively paired (elements in set B that have an incoming map).</p>
+  
+  <p>Unlike a function, a relation is completely unrestricted: an element in A can map to multiple elements in B, or to absolutely nothing at all. It is the raw, unrefined framework of mathematical mapping.</p>
+</div>
+
+<div class="card card-3">
+  <h2>Function</h2>
+  <p>A function is a relation between a set of inputs (the <strong>domain</strong>) and a set of permissible outputs (the <strong>codomain</strong>) where every single element in the domain is related to <strong>exactly one</strong> output in the codomain.</p>
+
+
+
+            <img src="Images/Function_machine2.svg.webp" alt="Subset" style="display: block; margin: 20px auto 0 auto;" height="250" width="250">
+
+</div>
+
+<div class="card card-4">
+  <h2>Limits</h2>
+  <p>A limit analyzes the dynamic behavior of a function near a point, rather than exactly at that point. It determines the single value a function approaches as the input gets infinitely close to a target.</p>
+
+  <h4>The Principle:</h4>
+<p>If we take the input <em>x</em> sufficiently close to a constant <em>c</em> (without letting <em>x = c</em>), then the output <em>f(x)</em> <strong>approaches arbitrarily close to</strong> the value <em>L</em><br>We denote this fundamental relationship using the <strong>limit notation</strong> below:</p>
+  
+  <div style="text-align: center; margin: 20px 0; font-size: 3rem; font-weight: bold;">
+    lim<sub>x → c</sub> f(x) = L
+  </div>
+
+</div>
+
+<div class="card card-5">
+  <h2>Differentiation</h2>
+  <p>Differentiation is the mathematical operation used to calculate the instantaneous rate of change of a dependent variable with respect to an independent variable.</p>
+
+  <p>We express this dynamic rate of change using the notation below:</p>
+
+  <div style="text-align: center; margin: 25px 0; font-size: 1.5rem; font-weight: bold; letter-spacing: 0.5px;">
+    <span style="font-family: serif; font-style: italic;">df(x)/dx</span> = lim<sub>Δx → 0</sub> <span style="display: inline-block; vertical-align: middle; text-align: center;"><span style="display: block; border-bottom: 1px solid #000; padding: 0 2px;">f(x + Δx) - f(x)</span><span style="display: block; padding: 0 2px;">Δx</span></span>
+  </div>
+  <h4>The Leibniz Perspective:</h4>
+  <p>This notation was designed by the mathematician <strong>Gottfried Wilhelm Leibniz</strong>. He viewed the derivative <strong>dy/dx</strong> not as a single abstract symbol, but as a literal ratio of two infinitely small changes (infinitesimals). This brilliant framework allows us to treat a curved line as if it is perfectly straight at a microscopic level.</p>
+</div>
+
+<div class="card card-6">
+  <h2>Integration</h2>
+  <p>Integration is the continuous analog of summation. While discrete summation adds distinct, separate values, integration sums an infinite number of infinitely thin quantities to find a total accumulation.</p>
+
+  <p>We express this continuous accumulation using the notation below:</p>
+
+  <div style="text-align: center; margin: 25px 0; font-size: 1.6rem; font-weight: bold; letter-spacing: 1px;">
+    ∫<sub>a</sub><sup>b</sup> f(x) dx = lim<sub>n → ∞</sub> <span>∑<sub>i=1</sub><sup>n</sup> f(x<sub>i</sub>) Δx</span>
+  </div>
+
+  <h4>The Leibniz Perspective:</h4>
+  <p>The integration symbol <strong>∫</strong> was introduced by <strong>Gottfried Wilhelm Leibniz</strong> as an elongated letter "S", standing for the Latin word <em>summa</em> (sum). In the term <strong>∫ f(x) dx</strong>, you are literally multiplying a height <em>f(x)</em> by an infinitesimal width <em>dx</em> and summing them all up over a continuous interval.</p>
+</div>
+</div>
+
+
+
+
+
+
+<!-- /* =========================================
+   History of Calculus
+   ========================================= */ -->
+        <div class="timeline-section">
+  <h2 class="timeline-title">The History of Calculus</h2>
+  
+  <div class="timeline-container">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <span class="date">370 BCE</span>
+        <h3>The Greek mathematicians:</h3>
+        <p>Around the 4th century BCE, Eudoxus developed, and Archimedes later perfected, the method of exhaustion. They inscribed and circumscribed regular polygons with an increasing number of sides to find the area of circle.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <span class="date">250 BCE</span>
+        <h3>Early Anticipation of Limits:</h3>
+        <p>Archimedes used this method to bound the value of &pi; and find the area of a parabolic segment. While it lacked the modern concept of a limit, it was conceptually the earliest form of integral calculus.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <span class="date">1400–1500 CE</span>
+        <h3>Parallel Breakthroughs in India:</h3>
+        <p>Independently, mathematicians in India developed highly sophisticated infinite series approximations for &pi; and trigonometric functions, laying early foundations for power series.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <span class="date">1637</span>
+        <h3>The 17th Century: The Analytic Geometry development:</h3>
+        <p>René Descartes and Pierre de Fermat independently pioneer analytic geometry, bridging algebra and geometry by plotting algebraic equations on a coordinate plane, which provides the necessary visual space for calculus.</p>
+      </div>
+    </div>
+
+    
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <span class="date">1665–1666</span>
+        <h3>The development Method of Fluxions:</h3>
+        <p>Sir Isaac Newton develops his system of calculus during the Great Plague of London, viewing variables as flowing quantities ("fluents") and their instantaneous rates of change as "fluxions"</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <span class="date">1637</span>
+        <h3>The Birth of Modern Notation:</h3>
+        <p>Gottfried Wilhelm Leibniz independently derives his version of calculus in Paris, introducing the elongated "S" symbol &int; for integration and the differential notation dy/dx based on sums of infinite microscopic differences.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <span class="date">1687</span>
+        <h3>Physics and calculus</h3>
+        <p>Newton publishes Philosophiae Naturalis Principia Mathematica, utilizing his calculus insights to prove his universal laws of motion and gravitation, though he deliberately hides the raw calculus calculations behind classical geometric proofs.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <span class="date">1734</span>
+        <h3>The Foundation Crisis</h3>
+        <p>Anglo-Irish philosopher Bishop George Berkeley publishes The Analyst, a scathing philosophical critique exposing the logical contradictions of infinitesimals, arguing that treating a value as non-zero to divide by it, and then treating it as zero to erase it, violates basic arithmetic logic.</p>
+      </div>
+    </div>
+
+    
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <span class="date">1821</span>
+        <h3>The Era of Rigor and Analysis:Inroduction of limits</h3>
+        <p>French mathematician Augustin-Louis Cauchy publishes Cours d'Analyse, successfully replacing the vague concept of infinitesimals with a formal, verbal definition of the limit, defining continuity and derivatives as variables approaching a fixed numerical target.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <span class="date">1823</span>
+        <h3>The Definition of the Integral:</h3>
+        <p>Cauchy introduces a precise definition of the integral for continuous functions by using finite algebraic sums of rectangles, giving integration its own standalone logical footing.</p>
+      </div>
+    </div>
+
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <span class="date">1872</span>
+        <h3>The Delta-Epsilon Definition:</h3>
+        <p> Weierstrass introduces the strict, purely algebraic (&epsilon;,&delta;)-definition of a limit, removing all geometric, spatial metaphors like "approaching" or "flowing," and fully cementing calculus as a bulletproof logical branch of mathematical analysis.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 
+/* =========================================
+   The Calculus of Our World
+   ========================================= */ -->
+<div class="practical-section">
+  <h2 class="timeline-title">The Calculus of Our World</h2>
+  <p class="practical-subtitle">Where the hidden mathematics of change powers the modern world.</p>
+
+  <div class="practical-grid">
+    <div class="practical-card rocket">
+      <div class="practical-icon">🚀</div>
+      <h3>Rocket Science</h3>
+      <p class="practical-desc">Classical kinematics models trajectories assuming constant mass, but an active spacecraft continuously depletes its propellant during ascent. Because mass is a continuous variable over time, differential calculus is required to resolve the Tsiolkovsky rocket equation and calculate precise orbital insertions.</p>
+    </div>
+
+    <div class="practical-card games">
+      <div class="practical-icon">🎮</div>
+      <h3>Game Engines</h3>
+      <p class="practical-desc">To simulate authentic physical environments, digital animation and modern graphics platforms evaluate instantaneous velocity and acceleration vectors in real time. Resolving these continuous differential equations prevents jagged, linear motion, producing smooth parabolic trajectories under gravitational fields.</p>
+    </div>
+
+    <div class="practical-card ai">
+      <div class="practical-icon">🤖</div>
+      <h3>Artificial Intelligence</h3>
+      <p class="practical-desc">Machine learning architectures train neural networks using an optimization framework known as Gradient Descent. Built on multivariable calculus, the algorithm calculates partial derivatives to map the local slope of a complex loss surface, systematically converging toward the coordinate of minimal error.</p>
+    </div>
+  </div>
+</div>
+<!-- /* =========================================
+   LIGHT-THEMED NEWTON FINALE QUOTE
+   ========================================= */ -->
+
+<div class="newton-quote-section">
+  <div class="newton-container">
+    <div class="newton-image-panel">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/GodfreyKneller-IsaacNewton-1689.jpg" alt="Sir Isaac Newton Portrait" class="newton-portrait">
+    </div>
+    
+    <div class="newton-text-panel">
+      <span class="newton-quote-mark">“</span>
+      <p class="newton-final-quote">
+        If I have seen further it is by standing on the shoulders of Giants.
+      </p>
+      <div class="newton-quote-author">— Sir Isaac Newton</div>
+    </div>
+  </div>
+</div>
+
+<!-- /* =========================================
+   FULL-WIDTH DEVELOPER FOOTER BLOCK
+   ========================================= */ -->
+
+<div class="footer-section">
+  <div class="about-card">
+    <h3 class="about-title">This website was Designed & Developed by</h3>
+    <p class="about-name">Souban Chakraborty</p>
+    <div class="about-divider"></div>
+    <p class="about-note">Built with precision, curiosity, creativity and the language of change.</p>
+  </div>
+</div>
+</html>

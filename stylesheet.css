@@ -1,0 +1,468 @@
+
+/* =========================================
+   Welcome text
+   ========================================= */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  /* Use viewport height and width correctly */
+  height: 100dvh; /* 'dvh' (dynamic vh) accounts for mobile address bars flawlessly */
+  width: 100%;   /* 'vw' stands for viewport width (100% of screen width) */
+  
+  box-sizing: border-box;
+  text-align: center;
+  
+  /* Your royal deep maroon-crimson to soft white gradient overlay */
+  background:rgba(255, 36, 91, 0.859);
+  
+  margin: 0;
+  padding: 20px;
+}
+
+/* CRITICAL: Clear default browser margins on the parent body */
+
+
+.title {
+  color: #FFFFFF !important;
+  font-size: 140px !important; /* Massive, commanding title */
+  font-family: 'Georgia', serif; /* Elegant, royal serif font */
+  letter-spacing: 20px; /* Highly spaced out imperial lettering */
+  margin: 0;
+  text-shadow: 0px 10px 30px rgba(0,0,0,0.8);
+  animation: goldPulse 3s ease-in-out;
+
+}
+
+.subtitle {
+  color: hsl(188, 100%, 96%) !important; /* Pure Metallic Gold */
+  font-size: 30px !important;
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+  letter-spacing: 10px;
+  margin-top: 25px;
+  text-shadow: 0px 4px 5px rgba(0,0,0,0.9);
+  animation: fadeIn 3s ease-in-out;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(1.2); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes goldPulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.03); opacity: 0.8; text-shadow: 0px 0px 15px rgba(212,175,55,0.6); }
+  100% { transform: scale(1); opacity: 1; }
+}
+/* =========================================
+   Calculus flashcards
+   ========================================= */
+.stack-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px; /* Space between cards before they stack */
+  padding-bottom: 50vh; /* Gives room for the last card to scroll */
+}
+
+.card {
+
+
+
+  position: sticky;
+  width: 80%;
+  height: 65vh;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  
+  /* This pins the cards as they reach the top */
+  top: 10vh; 
+  
+  /* Ensures later cards smoothly render on top of previous ones */
+  background: white; 
+
+  justify-content: flex-start;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding: 50px;
+
+  /*Use containment mapping instead of standard exit */
+  animation: shrinkAndFade linear both;
+  animation-timeline: view();
+  /* This forces the card to shrink AS it enters the top view boundary, not at the end of the page */
+  animation-range: entry 100% cover 50%; 
+  
+  transform-origin: center top;
+}
+
+.card h2 {
+  font-size: 2.5rem; /* Massive, clear main title */
+  margin-bottom: 20px;
+  margin-top: 0px;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.671);
+
+}
+
+.card h4 {
+  font-size: 1.5rem; /* Larger, bold subheadings */
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.25rem; /* Perfectly readable paragraph size */
+  line-height: 1.6;   /* Adds breathing room between lines of text */
+}
+
+
+/* 1. The animation stays the same */
+@keyframes shrinkAndFade {
+  to {
+    transform: scale(0.85); 
+    opacity: 0.8;           
+  }
+}
+
+/* Optional: Slightly shift or stack them uniquely */
+.card-1 { top: 5vh;  background-color: #ff0055; color: #ffffff; } /* Electric Hot Pink */
+.card-2 { top: 7vh;  background-color: #ff00bb; color: #ffffff; } /* Blaze Orange */
+.card-3 { top: 9vh;  background-color: #ffcc00; color: #111111; } /* Cyberpunk Yellow (Dark Text) */
+.card-4 { top: 11vh; background-color: #1caf68; color: #ffffff; } /* Neon Spring Green (Dark Text) */
+.card-5 { top: 13vh; background-color: #00b0ff; color: #ffffff; } /* Vivid Sky Blue */
+.card-6 { top: 15vh; background-color: #7c4dff; color: #ffffff; } /* Laser Violet */
+
+
+
+/* =========================================
+   History of Calculus
+   ========================================= */
+.timeline-section {
+  background-color: #111216; /* Clean dark background to make colors pop */
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 80px 20px;
+  box-sizing: border-box;
+/* CHANGE: Force absolute containment on width */
+  width: 100%;             
+  overflow-x: hidden; /* Clips any sub-elements bleeding over the right edge */
+  box-sizing: border-box;
+
+    /* 1. The Paper Texture */
+  background-image: url('Images/letters_handwriting_key_old_antique_vintage_background.jpg');
+  background-color: #1a1a1cc1; /* A deep dark base color */
+  
+  /* 2. The Dark Overlay to make text readable */
+  /* This darkens the paper so your light text stands out */
+  background-blend-mode: multiply;
+  
+  padding: 100px 20px;
+  background-size: cover;
+  background-attachment: fixed; /* Creates a premium parallax effect */
+}
+
+
+.timeline-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #ff0055; /* Matches your high-energy card pop colors */
+    text-shadow: 1.3px 1.3px 0px rgba(255, 255, 255, 0.778);
+
+}
+
+/* 2. The Timeline Track Layout */
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* The central vertical spine */
+.timeline-line {
+  position: absolute;
+  width: 4px;
+  background: linear-gradient(to bottom, #ff0055, #00b0ff);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 3. Timeline Individual Items */
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%; /* Takes up exactly half the screen width */
+  box-sizing: border-box;
+}
+
+/* Alternating positioning to left and right sides */
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Inside block boxes styling */
+.timeline-content {
+  padding: 20px 30px;
+  background: #1e1f26;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.date {
+  font-weight: bold;
+  color: #00e676; /* Vibrant green accent for the year */
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* 4. Responsive Design: Smash it into one line on mobile screens */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 31px; /* Pin line to the far left side */
+  }
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding-left: 70px;
+    text-align: left !important;
+  }
+}
+
+
+/* =========================================
+   The Calculus of Our World
+   ========================================= */
+.practical-section {
+  background-color: #0a0a0c; /* Super deep dark background */
+  color: #ffffff;
+  padding: 100px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.practical-subtitle {
+  text-align: center;
+  color: #a0aab5;
+  font-size: 1.2rem;
+  margin: -40px 0 60px 0;
+}
+
+/* The horizontal flex layout container */
+.practical-grid {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Base style for each interactive block */
+.practical-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 360px;
+  background: #1e1f26; /* Matches timeline box gray */
+  padding: 40px 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  
+  /* The Magic Link: Animates the cards smoothly when hovering */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practical-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.practical-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+}
+
+.practical-desc {
+  font-size: 1.05rem;
+  color: #cdd5de;
+  line-height: 1.6;
+}
+.practical-card:hover {
+  transform: translateY(-12px); /* Lifts the card upwards */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Unique color glow profiles for each card type */
+.practical-card.rocket:hover { border-color: #ff0055; } /* Neon Pink outline */
+.practical-card.games:hover  { border-color: #00e676; } /* Neon Green outline */
+.practical-card.ai:hover     { border-color: #00b0ff; } /* Neon Sky Blue outline */
+
+
+/* =========================================
+   LIGHT-THEMED NEWTON FINALE QUOTE
+   ========================================= */
+.newton-quote-section {
+  background-color: #f4f5f7; /* Elegant, soft Alabaster light theme */
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0;
+  overflow: hidden;
+}
+
+.newton-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  flex-wrap: wrap; /* Supports mobile wrapping automatically */
+}
+
+/* Left Side: Image Container */
+.newton-image-panel {
+  flex: 1;
+  min-width: 300px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.newton-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crops the portrait organically to fit the screen height */
+  object-position: center top; /* Keeps Newton's face perfectly framed */
+}
+
+/* Right Side: Text Container */
+.newton-text-panel {
+  flex: 1;
+  min-width: 300px;
+  padding: 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f4f5f7;
+}
+
+.newton-quote-mark {
+  display: block;
+  font-family: 'Georgia', serif;
+  font-size: 8rem;
+  color: rgba(255, 0, 85, 0.1); /* Subtle, elegant transparent pink hue */
+  line-height: 1;
+  margin-bottom: -30px;
+}
+
+.newton-final-quote {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  line-height: 1.6;
+  color: #111216; /* Deep charcoal for sharp reading text contrast */
+  font-style: italic;
+  margin: 0 0 25px 0;
+}
+
+.newton-quote-author {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.3rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #5a6578; /* Structured slate gray subtext */
+}
+
+/* Responsive adjustment for clean reading on mobile screens */
+@media (max-width: 768px) {
+  .newton-image-panel {
+    height: 50vh; /* Reduces image footprint to top half of screen on mobile */
+  }
+  .newton-text-panel {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .newton-final-quote {
+    font-size: 1.8rem;
+    line-height: 1.5;
+  }
+  .newton-quote-mark {
+    font-size: 5rem;
+    margin-bottom: -15px;
+  }
+}
+
+/* =========================================
+   FULL-WIDTH FOOTER BLOCK
+   ========================================= */
+.footer-section {
+  background-color: #111216; /* Darker tone for a professional finish */
+  width: 100%;             /* Forces full width */
+  padding: 60px 0;         /* Vertical spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.about-card {
+  background: transparent; /* Clean, borderless look */
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.about-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #8a95a5;
+  margin-bottom: 10px;
+}
+
+.about-name {
+  font-family: 'Georgia', serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+.about-divider {
+  width: 60px;
+  height: 2px;
+  background: #ff0055;
+  margin: 20px auto;
+}
+
+.about-note {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: #a0aab5;
+  font-size: 1rem;
+}
